@@ -1,0 +1,47 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.container{
+    background-color: black;
+    border: 1px solid black;
+    width: 400px;
+    height: 420px;
+    margin: auto;
+}
+
+#screen-input{
+    height: 70px;
+    font-size: 35px;
+    color: cyan;
+    padding: 10px 10px;
+    text-align: right;
+    flex: 4;
+}
+
+.rows{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+button{
+    flex: 1;
+    height: 70px;
+    font-size: 35px;
+    background-color: cyan;
+    border: none;
+}
+
+#clear{
+    flex: 2;
+}
+
+.zero{
+    flex: 3;
+}
