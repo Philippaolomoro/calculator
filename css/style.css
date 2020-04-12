@@ -1,3 +1,65 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
 body{
+   font-size: 2.188rem;
+}
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #fff, #000);
+}
+.container{
+    width: 25rem;
+    margin: 2.5rem auto;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 0.313rem;
+}
+button{
+    font-size: inherit;
+    border-radius: 100%;
+    border: 0.063rem solid white;
+}
+button:hover{
+    cursor: pointer;
+    background-color: darkgray;
+    border: 0.063rem solid darkgray;
+}
+button:focus {
+    outline: none;
+    border: none;
+}
+button:active {
+    transform: translateY(.2rem);
+    border: none;
+}
+.black{
+    background-color: black;
+    color: #fff;
+    border: 0.063rem solid black;
+}
+#screen-input{
+    grid-column: 1/5;
+    text-align: end;
+    padding: 2.188rem;
+    background-color: black;
+    color: blanchedalmond;
+    border-radius: 3.5rem;
+}
+#clear{
+    grid-column: 1/3;
+    border-radius: 3.5rem;
+}
+#zero{
+    grid-column: 1/4;
+    border-radius: 3.5rem;
 }
