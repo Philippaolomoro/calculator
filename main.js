@@ -1,29 +1,24 @@
-let numberButtons = document.querySelector(".number-button");
-let screenInput = document.querySelector("#screen-input");
-let clear = document.querySelector("#clear");
-let backArrow = document.querySelector("#back-arrow");
-let operators = document.querySelector(".operators");
+let screenDisplay = document.querySelector('#screen-display');
+let numberButtons = document.querySelectorAll(".number-buttons");
+let clearButton = document.querySelector('#clear');
 
-let screenDisplay = 0;
-let evalInput = [];
-let pendingVal;
+let screenInput = '0';
 
-for(let i = 0; i < numberButtons.length; i++) {
-    numberButtons[i].addEventListener("click", () => {
-        
-    });
+let currentScreenDisplay = (e) => {
+    let buttonText = e.target.innerText;
+    if(screenInput === "0"){
+        screenInput = ''
+    }
+    screenInput += buttonText;
+    screenDisplay.textContent = screenInput;
 }
 
-for(let i = 0; i < operators.length; i++) {
-    operators[i].addEventListener("click", () => {
-
-    });
+for(let i = 0; i < numberButtons.length; i++){
+    numberButtons[i].addEventListener("click", currentScreenDisplay);
+    console.log("yes");
 }
 
-clear.addEventListener("click", ()=> {
-
-});
-
-backArrow.addEventListener("click", ()=> {
-
-});
+clearButton.addEventListener('click', ()=> {
+    screenInput = '0'
+    screenDisplay.innerText = screenInput
+})

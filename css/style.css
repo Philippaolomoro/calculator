@@ -47,7 +47,7 @@ button:active {
     color: #fff;
     border: 0.063rem solid black;
 }
-#screen-input{
+#screen-display{
     grid-column: 1/5;
     text-align: end;
     padding: 2.188rem;
